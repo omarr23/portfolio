@@ -27,7 +27,8 @@ body {
     top: 0;
     z-index: 1000;
     backdrop-filter: blur(10px);
-}
+    justify-content: space-around; 
+  }
 
 .navbar-logo .logo {
     font-size: 1.5rem;
@@ -192,11 +193,11 @@ section {
     color: var(--text-color);
 }
 .github-logo {
-    width: 50px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin-top: 1rem; /* Optional: Add some spacing */
+    width: 50px;
+    height: auto; 
+    margin-top: 1rem; 
 }
-/* Social Media Links */
+
 .social-links {
     display: flex;
     justify-content: center;
@@ -227,7 +228,7 @@ section {
     filter: invert(100%);
 }
 
-/* Update existing styles */
+
 .contact-section {
     text-align: center;
     background-color: var(--secondary-color);
@@ -235,7 +236,6 @@ section {
     position: relative;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .navbar-links {
         display: none;
