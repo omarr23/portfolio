@@ -3,116 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>omar salah</title>
+    <meta name="description" content="Omar Salah - Software Engineer specializing in web development and database optimization">
+    <title>Omar Salah | Software Engineer</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="./Backend_Developer_Icon.jpg">
 </head>
 <body>
-
-    <script src="scripts.js"></script> <!-- Linking JavaScript -->
     <nav class="navbar">
         <div class="navbar-logo">
             <div class="logo">OS</div>
         </div>
         <ul class="navbar-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#work">Work Experience</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#work" class="nav-link">Experience</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
         <div class="navbar-resume">
-            <a target="_blank" href="./Resume.pdf" class="resume-button">Resume</a>
+            <a target="_blank" href="./Resume.pdf" class="resume-button" aria-label="Download Resume">Resume</a>
         </div>
+        <button class="mobile-menu-button" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
 
-    <section class="hero" id="hero">
-        <div class="hero-intro-section">
-            <p class="hero-intro">Hello!</p>
-            <h1 class="hero-name">Omar Salah is here 👋</h1>
-            <h2 class="hero-tagline">I build things for the web.</h2>
-            <p class="hero-description">I’m a software engineer specializing in delivering seamless digital experiences. Currently, I’m developing software at <a target="_blank" href="https://www.depi.gov.eg">DEPI</a>.</p>
-            <div class="contact-me">
-                <a href="#contact" class="contact-button">Contact Me</a>
+    <main>
+        <section class="hero" id="hero">
+            <div class="hero-intro-section">
+                <p class="hero-intro">Hello!</p>
+                <h1 class="hero-name">Omar Salah <span class="wave">👋</span></h1>
+                <h2 class="hero-tagline">Building seamless web experiences</h2>
+                <p class="hero-description">I'm a software engineer specializing in full-stack development and database optimization. Currently developing innovative solutions at <a target="_blank" href="https://www.depi.gov.eg" class="company-link">DEPI</a>.</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="primary-button">Contact Me</a>
+                    <a href="#projects" class="secondary-button">View My Work</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="about-section" id="about">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>Hello! I'm Omar Salah, a passionate software engineer with a focus on delivering exceptional digital experiences. </p>
-                <p>Here are some of the services I provide:</p>
-                <ul class="tech-list">
-                    <li>1-Web Development</li>
-                    <li>2-Database Management and Optimization</li>
-                 
+        <section class="about-section" id="about">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a passionate software engineer focused on creating efficient and scalable web solutions. With expertise in .NET Core and database optimization, I strive to deliver exceptional digital experiences that make a difference.</p>
+                    <p>My core services include:</p>
+                    <ul class="tech-list">
+                        <li>Full-Stack Web Development</li>
+                        <li>Database Management & Optimization</li>
+                        <li>API Development & Integration</li>
+                        <li>Performance Optimization</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="./Screenshot 2024-12-19 at 14-56-17 Inbox • Chats.png" alt="Omar Salah - Software Engineer" class="profile-image">
+                </div>
+            </div>
+        </section>
+
+        <section class="work-section" id="work">
+            <h2 class="section-title">Experience</h2>
+            <div class="work-content">
+                <div class="work-card">
+                    <h3 class="work-title">Full Stack .NET Web Developer</h3>
+                    <p class="work-company">@DEPI</p>
+                    <p class="work-duration">October 2024 – Present</p>
+                    <ul class="work-achievements">
+                        <li>Led the development of high-performance web applications using .NET Core and Entity Framework Core</li>
+                        <li>Implemented database optimization strategies resulting in improved query performance and scalability</li>
+                        <li>Collaborated with cross-functional teams to deliver robust software solutions</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="education-section" id="education">
+            <h2 class="section-title">Education</h2>
+            <div class="education-card">
+                <h3 class="education-title">Computer Science</h3>
+                <p class="education-school">Thebes Higher Institute for Computer and Administrative Sciences</p>
+                <p class="education-duration">October 2021 – June 2025</p>
+                <ul class="education-courses">
+                    <li>Object-Oriented Programming</li>
+                    <li>Data Structures & Algorithms</li>
+                    <li>Database Management Systems</li>
+                    <li>Distributed Systems</li>
+                    <li>Artificial Intelligence</li>
                 </ul>
             </div>
-            <div class="about-image">
-                <img src="./Screenshot 2024-12-19 at 14-56-17 Inbox • Chats.png" alt="Profile Image">
+        </section>
+
+        <section class="projects-section" id="projects">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-gallery">
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="./assets/LinkUp.jpg" alt="LinkUp Project">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">LinkUp</h3>
+                        <p class="project-description">A modern social networking platform built with .NET Core and React.</p>
+                        <div class="project-tech">
+                            <span>.NET Core</span>
+                            <span>React</span>
+                            <span>SQL Server</span>
+                        </div>
+                    </div>
+                </article>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="work-section" id="work">
-        <h2 class="section-title">Where I’ve Worked</h2>
-        <div class="work-content">
-            <h3> Software Development - Full stack .Net Web Developer @DEPI</h3>
-            <p>October 2024 – Present</p>
-            <ul>
-                <li>1-Designed and Developed Core Web Application: Successfully implemented a high-performance web application leveraging .NET Core, Entity Framework Core, and SQL Server, ensuring seamless data management and exceptional user experience.</li>
-                <li>2-Database Optimization: Optimized database queries to enhance performance, efficiency and scalability. </li>
-               
-            </ul>
-        </div>
-    </section>
-
-    <section class="education-section" id="education">
-        <h2 class="section-title">Where I’ve Studied</h2>
-        <h3>Thebes Higher Institute for Computer and Administrative Sciences</h3>
-        <p>october 2021 – june 2025</p>
-        <ul>
-            <li>Object-Oriented Programming</li>
-            <li>Data Structures & Algorithms</li>
-            <li>Database Management Systems</li>
-            <li>Distributed Systems</li>
-            <li>AI</li>
-        </ul>
-    </section>
-
-    <section class="projects-section" id="projects">
-        <h2 class="section-title">Projects</h2>
-        <div class="projects-gallery">
-            <div class="project-item">
-                <h3>LinkUp</h3>
-                <img src="./assets/LinkUp.jpg" alt="LinkUp">
+        <section class="contact-section" id="contact">
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="contact-description">I'm currently open to new opportunities and collaborations. Feel free to reach out!</p>
+            <a href="mailto:omar.salah2015.os@gmail.com" class="contact-button">Say Hello</a>
+            <div class="social-links">
+                <a href="https://github.com/omarr23" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub Profile">
+                    <img src="./github-logo.png" alt="" class="social-icon">
+                </a>
+                <a href="mailto:omar.salah2015.os@gmail.com" class="social-link" aria-label="Email">
+                    <img src="./gmail.png" alt="" class="social-icon">
+                </a>
+                <a href="https://www.linkedin.com/in/omar-salah-71605425b" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn Profile">
+                    <img src="./linkedin.png" alt="" class="social-icon">
+                </a>
             </div>
-            <!-- Add other projects here -->
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <section class="contact-section" id="contact">
-        <h2>Contact Me</h2>
-        <p>I am actively looking for new opportunities. My inbox is always open!</p>
-        <a href="mailto:omar.salah2015.os@gmail.com" class="contact-button">Say Hello</a>
-        <div class="social-links">
-            <a href="https://github.com/omarr23" target="_blank" class="social-link">
-                <img src="./github-logo.png" alt="GitHub" class="social-icon">
-            </a>
-            <a href="mailto:omar.salah2015.os@gmail.com" class="social-link">
-                <img src="./gmail.png" alt="Gmail" class="social-icon">
-            </a>
-            <a href="https://www.linkedin.com/in/omar-salah-71605425b" target="_blank" class="social-link linkedin-icon">
-                <img src="./linkedin.png" alt="LinkedIn" class="social-icon">
-            </a>
-        </div>
-    </section>
-    
     <footer class="footer">
-        
+        <p>© 2024 Omar Salah. All rights reserved.</p>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
-<!-- Todo change resume url add project picture and add some details -->
