@@ -11,28 +11,28 @@ const throttle = (func, limit) => {
 };
 
 // Intersection Observer for Sections
-const observerOptions = {
-    root: null,
+// This observer will watch each <section> and can trigger animations or logs
+const sectionObserverOptions = {
+    root: null, // null means the viewport
     rootMargin: '0px',
-    threshold: 0.2
+    threshold: 0.5 // triggers when 50% of the section is visible
 };
 
 const sectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            // Add fade-in animation class
-            entry.target.classList.add('section-visible');
-            
-            // Update active nav link
-            const currentId = entry.target.id;
-            document.querySelectorAll('.navbar-links a').forEach(link => {
-                link.classList.toggle('active', link.getAttribute('href') === `#${currentId}`);
-            });
-        }
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        console.log(`Section #${entry.target.id} is visible`);
+        // Example: add a class to fade in
+        entry.target.classList.add('section-visible');
+      } else {
+        console.log(`Section #${entry.target.id} is not visible`);
+        // Example: remove the class if you want it to fade out again
+        // entry.target.classList.remove('section-visible');
+      }
     });
-}, observerOptions);
+}, sectionObserverOptions);
 
-// Initialize observers for all sections
+// Start observing all sections
 document.querySelectorAll('section').forEach(section => {
     sectionObserver.observe(section);
 });
@@ -49,7 +49,6 @@ document.querySelectorAll('.navbar-links a').forEach(anchor => {
                 behavior: 'smooth',
                 block: 'start'
             });
-
             // Update URL without page jump
             history.pushState(null, null, this.getAttribute('href'));
         }
@@ -106,7 +105,10 @@ const heroObserver = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.5 });
 
-heroObserver.observe(document.querySelector('.hero'));
+const heroSection = document.querySelector('.hero');
+if (heroSection) {
+    heroObserver.observe(heroSection);
+}
 
 // Contact Form Handling
 const contactForm = document.querySelector('.contact-form');
@@ -126,7 +128,7 @@ if (contactForm) {
             const data = Object.fromEntries(formData.entries());
             
             // Here you would normally send the data to your server
-            // For now, we'll simulate a success response
+            // For now, we simulate a success response
             await new Promise(resolve => setTimeout(resolve, 1000));
             
             // Show success message
@@ -159,22 +161,26 @@ function showNotification(message, type = 'info') {
     }, 3000);
 }
 
-// Add necessary CSS
+// Dynamically add necessary CSS
 const style = document.createElement('style');
 style.textContent = `
+    /* Hide navbar on scroll */
     .navbar-hidden {
         transform: translateY(-100%);
     }
     
+    /* Navbar visual style when scrolled */
     .navbar.scrolled {
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         background-color: rgba(0, 0, 0, 0.95);
     }
     
+    /* Section animation on intersection */
     .section-visible {
         animation: fadeIn 0.8s ease forwards;
     }
     
+    /* Notifications */
     .notification {
         position: fixed;
         bottom: 20px;
@@ -186,6 +192,7 @@ style.textContent = `
         transform: translateY(100px);
         opacity: 0;
         transition: all 0.3s ease;
+        z-index: 9999;
     }
     
     .notification.show {
@@ -213,4 +220,11 @@ style.textContent = `
     }
 `;
 
+// Toggle Blackout (disable styles) button
 document.head.appendChild(style);
+const toggleStyleBtn = document.getElementById('toggle-style-btn');
+if (toggleStyleBtn) {
+    toggleStyleBtn.addEventListener('click', function () {
+        document.body.classList.toggle('disable-style');
+    });
+}
