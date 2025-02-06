@@ -57,25 +57,20 @@ document.querySelectorAll('.navbar-links a').forEach(anchor => {
 
 // Navbar Scroll Behavior
 const navbar = document.querySelector('.navbar');
-let lastScroll = 0;
+let lastScrollTop = 0;
 
-const handleScroll = throttle(() => {
-    const currentScroll = window.pageYOffset;
-    
-    // Add shadow and background when scrolled
-    navbar.classList.toggle('scrolled', currentScroll > 50);
-    
-    // Hide/show navbar based on scroll direction
-    if (currentScroll > lastScroll && currentScroll > 100) {
-        navbar.classList.add('navbar-hidden');
+window.addEventListener('scroll', function() {
+    let currentScroll = window.scrollY;
+
+    if (currentScroll > lastScrollTop) {
+        navbar.style.top = "-80px"; // Adjust based on navbar height
     } else {
-        navbar.classList.remove('navbar-hidden');
+        navbar.style.top = "0";
     }
-    
-    lastScroll = currentScroll;
-}, 150);
 
-window.addEventListener('scroll', handleScroll);
+    lastScrollTop = currentScroll;
+});
+
 
 // Typing Animation for Hero Section
 function initTypeWriter() {
