@@ -9,6 +9,7 @@
     <link rel="icon" href="./Backend_Developer_Icon.jpg">
 </head>
 <body>
+    <!-- NAVBAR -->
     <nav class="navbar">
         <div class="navbar-logo">
             <div class="logo">OS</div>
@@ -23,10 +24,8 @@
         <div class="navbar-resume">
             <a target="_blank" href="./Resume.pdf" class="resume-button" aria-label="Download Resume">📄 Resume</a>
         </div>
-        
-        <!-- New Toggle Blackout Button -->
         <button id="toggle-style-btn" class="toggle-style-btn" aria-label="Toggle Blackout Mode">
-             Blackout
+            Blackout
         </button>
         <button class="mobile-menu-button" aria-label="Toggle menu">
             <span></span>
@@ -34,15 +33,19 @@
             <span></span>
         </button>
     </nav>
-    
 
     <main>
+        <!-- HERO -->
         <section class="hero" id="hero">
             <div class="hero-intro-section">
                 <p class="hero-intro">Hello!</p>
                 <h1 class="hero-name">Omar Salah <span class="wave">👋</span></h1>
-                <h2 class="hero-tagline">Building seamless web experiences</h2>
-                <p class="hero-description">I'm a software engineer specializing in full-stack development and database optimization. Currently developing innovative solutions at <a target="_blank" href="https://www.depi.gov.eg" class="company-link">DEPI</a>.</p>
+                <h2 class="hero-tagline" data-typed="Building seamless web experiences"></h2>
+                <p class="hero-description">
+                    I'm a software engineer specializing in full-stack development and database optimization.
+                    Currently developing innovative solutions at
+                    <a target="_blank" href="https://www.depi.gov.eg" class="company-link">DEPI</a>.
+                </p>
                 <div class="cta-buttons">
                     <a href="#contact" class="primary-button">Contact Me</a>
                     <a href="#projects" class="secondary-button">View My Work</a>
@@ -50,11 +53,15 @@
             </div>
         </section>
 
+        <!-- ABOUT -->
         <section class="about-section" id="about">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>I'm a passionate software engineer focused on creating efficient and scalable web solutions. With expertise in .NET Core and database optimization, I strive to deliver exceptional digital experiences that make a difference.</p>
+                    <p>
+                        I'm a passionate software engineer focused on creating efficient and scalable web solutions.
+                        With expertise in .NET Core and database optimization, I strive to deliver exceptional digital experiences that make a difference.
+                    </p>
                     <p>My core services include:</p>
                     <ul class="tech-list">
                         <li>Full-Stack Web Development</li>
@@ -69,6 +76,7 @@
             </div>
         </section>
 
+        <!-- EXPERIENCE -->
         <section class="work-section" id="work">
             <h2 class="section-title">Experience</h2>
             <div class="work-content">
@@ -85,6 +93,7 @@
             </div>
         </section>
 
+        <!-- EDUCATION -->
         <section class="education-section" id="education">
             <h2 class="section-title">Education</h2>
             <div class="education-card">
@@ -101,6 +110,7 @@
             </div>
         </section>
 
+        <!-- PROJECTS -->
         <section class="projects-section" id="projects">
             <h2 class="section-title">Featured Projects</h2>
             <div class="projects-gallery">
@@ -111,15 +121,17 @@
                         </div>
                         <div class="project-content">
                             <h3 class="project-title">Electronics price tracker</h3>
-                        </a>
-                        <p class="project-description">The main idea of the project is to monitor and aggregate price changes across various eCommerce platforms, focusing on electronics listings. It can expand to more genres and categories. The platform continuously tracks these stores, providing up-to-date information on product prices and trends, helping consumers make informed purchasing decisions</p>
-                        <div class="project-tech">
-                            <span>python</span>
-                            <span>Mariadb</span>
+                    </a>
+                            <p class="project-description">
+                                The main idea of the project is to monitor and aggregate price changes across various eCommerce platforms, focusing on electronics listings.
+                                It can expand to more genres and categories. The platform continuously tracks these stores, providing up-to-date information on product prices and trends, helping consumers make informed purchasing decisions.
+                            </p>
+                            <div class="project-tech">
+                                <span>python</span>
+                                <span>Mariadb</span>
+                            </div>
                         </div>
-                    </div>
                 </article>
-                
                 <article class="project-card">
                     <a href="https://gitlab.com/k-sae/easy-learning-v4" target="_blank" rel="noopener noreferrer">
                         <div class="project-image">
@@ -127,16 +139,17 @@
                         </div>
                         <div class="project-content">
                             <h3 class="project-title">Easy Learning</h3>
-                        </a>
-                        <p class="project-description">An online learning platform where users can access a wide range of courses, tutorials, and educational resources.</p>
-                        <div class="project-tech">
-                            <span>laravel</span>
-                            <span>php</span>
-                            <span>mysql</span>
+                    </a>
+                            <p class="project-description">
+                                An online learning platform where users can access a wide range of courses, tutorials, and educational resources.
+                            </p>
+                            <div class="project-tech">
+                                <span>laravel</span>
+                                <span>php</span>
+                                <span>mysql</span>
+                            </div>
                         </div>
-                    </div>
                 </article>
-                
                 <article class="project-card">
                     <a href="https://github.com/omarr23/manasa-frontend" target="_blank" rel="noopener noreferrer">
                         <div class="project-image">
@@ -144,32 +157,36 @@
                         </div>
                         <div class="project-content">
                             <h3 class="project-title">Mansa</h3>
-                        </a>
-                        <p class="project-description">Improved version of easy learning</p>
-                        <div class="project-tech">
-                            <span>Typescript</span>
-                            <span>Node.js</span>
-                            <span>postgres</span>
+                    </a>
+                            <p class="project-description">
+                                Improved version of easy learning
+                            </p>
+                            <div class="project-tech">
+                                <span>Typescript</span>
+                                <span>Node.js</span>
+                                <span>postgres</span>
+                            </div>
                         </div>
-                    </div>
                 </article>
-                
             </div>
         </section>
 
+        <!-- CONTACT -->
         <section class="contact-section" id="contact">
             <h2 class="section-title">Let's Connect</h2>
-            <p class="contact-description">I'm currently open to new opportunities and collaborations. Feel free to reach out!</p>
+            <p class="contact-description">
+                I'm currently open to new opportunities and collaborations. Feel free to reach out!
+            </p>
             <a href="mailto:omar.salah2015.os@gmail.com" class="contact-button">Say Hello</a>
             <div class="social-links">
                 <a href="https://github.com/omarr23" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub Profile">
-                    <img src="./github-logo.png" alt="" class="social-icon">
+                    <img src="./github-logo.png" alt="GitHub" class="social-icon">
                 </a>
                 <a href="mailto:omar.salah2015.os@gmail.com" class="social-link" aria-label="Email">
-                    <img src="./gmail.png" alt="" class="social-icon">
+                    <img src="./gmail.png" alt="Email" class="social-icon">
                 </a>
                 <a href="https://www.linkedin.com/in/omar-salah-71605425b" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn Profile">
-                    <img src="./linkedin.png" alt="" class="social-icon">
+                    <img src="./linkedin.png" alt="LinkedIn" class="social-icon">
                 </a>
             </div>
         </section>
@@ -182,5 +199,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
-<!-- TODO add project cards and make it shade when you hovver on it it turn light color  and adjust resume  -->
