@@ -153,7 +153,7 @@ document.addEventListener('keydown', e => {
     }
 });
 
-// ==== (Optional) Contact Form with Notification ====
+
 // If you ever add a <form class="contact-form">...
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
